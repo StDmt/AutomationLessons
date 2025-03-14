@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "automation software testing",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StDmt/AutomationLessons.git"
@@ -17,7 +15,10 @@
   },
   "homepage": "https://github.com/StDmt/AutomationLessons#readme",
   "dependencies": {
-    "@playwright/test": "^1.50.1",
     "prettier": "^3.5.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.10"
   }
 }
