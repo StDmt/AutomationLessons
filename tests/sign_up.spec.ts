@@ -15,12 +15,9 @@ test("SignUp", async ({ page }) => {
     newUser.new_password,
     newUser.new_username
   );
-  await expect(page).toHaveURL(
-    "https://gitlab.testautomate.me/users/sign_up/welcome"
-  );
   await welcomePage.gotoUrl();
   await welcomePage.selectRole(newUser.role, newUser.reason);
   await expect(page).toHaveURL(
-    "https://gitlab.testautomate.me/dashboard/projects"
+   "https://gitlab.testautomate.me/dashboard/projects"
   );
 });

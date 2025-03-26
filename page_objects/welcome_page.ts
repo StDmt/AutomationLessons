@@ -6,7 +6,7 @@ export class WelcomePage {
   readonly getStarted: Locator;
   constructor(page: Page) {
     this.page = page;
-    this.role_dropdown = page.locator('[data-qa-selector="role_dropdown"]');
+    this.role_dropdown = page.locator('[id="user_role"]');
     this.gitLab_because_dropdown = page.locator(
       '[id="user_registration_objective"]'
     );
