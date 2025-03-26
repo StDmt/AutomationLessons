@@ -1,0 +1,25 @@
+{
+  "name": "automationlessons",
+  "version": "1.0.0",
+  "description": "automation software testing",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StDmt/AutomationLessons.git"
+  },
+  "author": "Dmytro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StDmt/AutomationLessons/issues"
+  },
+  "homepage": "https://github.com/StDmt/AutomationLessons#readme",
+  "dependencies": {
+    "prettier": "^3.5.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.10"
+  }
+}
