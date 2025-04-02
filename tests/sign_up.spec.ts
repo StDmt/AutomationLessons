@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { SignUpPage } from "../page_objects/sing_up_page";
 import { WelcomePage } from "../page_objects/welcome_page";
 import { NewUser } from "../helpers/UserModel";
+import * as fs from "fs";
 
 test("SignUp", async ({ page }) => {
   const signUpPage = new SignUpPage(page);
@@ -16,8 +17,13 @@ test("SignUp", async ({ page }) => {
     newUser.new_username
   );
   await welcomePage.gotoUrl();
-  await welcomePage.selectRole(newUser.role, newUser.reason);
+ await welcomePage.selectRole(newUser.role, newUser.reason);
   await expect(page).toHaveURL(
-   "https://gitlab.testautomate.me/dashboard/projects"
-  );
+  "https://gitlab.testautomate.me/dashboard/projects"
+ );
+  const newUserData = {username: newUser.new_username,
+    password: newUser.new_password
+  };
+  fs.writeFileSync('./user_data/user.json', JSON.stringify(newUserData, null, 2));
+  console.log("User data saved to ./user_data/user.json")
 });
